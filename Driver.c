@@ -12,7 +12,7 @@ int main(){
 	print_list(list);
 	list = insert_front(list,0);
 	print_list(list);
-	free_list(list);
-	// printf("%d",(int)(list==NULL));
+	list = free_list(list);
+	printf("list is now %s\n",(char*)list);
 	return 0;
 }

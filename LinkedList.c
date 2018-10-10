@@ -3,7 +3,10 @@
 void print_list(struct node *start){
 	printf("[");
 	while (start){
-		printf("%d,",start -> i);
+		printf("%d",start -> i);
+		if (start -> next){
+			printf(",");
+		}
 		start = start -> next;
 	}
 	printf("]\n");
@@ -23,7 +26,7 @@ struct node *free_list(struct node *start){
 		free(current);
 		current = temp;
 	}
-	return start;
+	return NULL;
 }
 
 
